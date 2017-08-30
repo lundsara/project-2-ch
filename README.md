@@ -1,4 +1,4 @@
-## Sarah Lund  / 08/29/2017 
+## Sarah Lund   08/29/2017 
 
 ## Class Critique Proposal
 This application offers you the ability to log your opinions on fitness class you have taken, the class name, and the instructor! 
