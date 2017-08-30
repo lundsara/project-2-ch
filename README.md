@@ -9,7 +9,7 @@ This database can be used as an individual resource or can be shared to inform o
 FullSizeRender.jpg
 
 <img src="/assets/Wireframe1.jpg"></img>
-<img src="/assets/Wireframe2.jpg"></img>
+
 <img src="/assets/Wireframe3.jpg"></img>
 
 
