@@ -1,12 +1,15 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/header.ejs %>
 
-<form method='POST' action='/reviews'>
-  <input name='className' type='text' placeholder='Class Name' />
-  <input name='instructor' type='text' placeholder='Who was your instructor?' />
-  <input name='level' type='text' placeholder='What was the class level?'/>
-  <input name='review' type='text' placeholder='What did you think of the class?'/>
+<div id='smallcircle'> Add your review below! </div>
 
-  <input type='submit' value='Add you Review!' />
+<form method='POST' action='/reviews/'>
+  <input class='white' name='classname' type='text' placeholder='Class Name' />
+  <input class='white' name='instructor' type='text' placeholder='Who was your instructor?' />
+  <input class='white' name='level' type='text' placeholder='What was the class level?'/>
+  <input class='long' name='review' type='text' placeholder='What did you think of the class?'/>
+</br>
+  <input type='submit' value='Add your Review!' />
 </form>
 
   <% include ../partials/footer %>

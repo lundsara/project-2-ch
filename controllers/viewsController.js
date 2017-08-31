@@ -21,6 +21,7 @@ module.exports = {
   },
 
   showOne(req, res) {
+    console.log(res.locals)
     res.render('reviews/reviews-single', {
       data: res.locals.review,
     });

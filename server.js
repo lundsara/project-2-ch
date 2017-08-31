@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
-// app.use('/reviews', reviewRouter);
+app.use('/reviews', reviewRouter);
 
 
 app.get('/', (req,res) => res.render('reviews/reviews-index', {

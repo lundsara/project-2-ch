@@ -1,13 +1,23 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/header.ejs %>
 
+<div id='smallcircle'> Here's the lowdown! </div>
 <div class='review'>
-  <h1><%= data.className %></h1>
-  <h3><%= data.instructor %></h3>
-  <h3><%= data.level %></h3>
-  <h3><%= data.review %></h3>
-  <a href="/reviews/<%= data.id %>/edit"> Edit Review <%= data.id %> </a>
+  <p> Class: <%= data.classname %></p>
+  <br>
+  <p> Instructor: <%= data.instructor %></p>
+  <br>
+  <p> Level: <%= data.level %></p>
+  <br>
+  <p>Review: "<%= data.review %>"</p>
+  <br>
+  <div id='buttons'>
+  <a href="/reviews/<%= data.id %>/edit"> Edit Review </a>
   <form action="/reviews/<%= data.id %>?_method=Delete" method="Post">
-    <input type="Submit" value="Delete"/>
+    <input id='delete' type="Submit" value="Delete"/>
   </form>
   <a href='/reviews/'>See all Reviews</a>
+  </div>
 </div>
+
+<% include ../partials/footer %>

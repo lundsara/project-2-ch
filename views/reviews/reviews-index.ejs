@@ -1,17 +1,22 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/header.ejs %>
 
 <main>
 
-<div id='welcome'> Welcome to Class Critique! </div>
+<div id='circle'>
+  <div id='welcome'>
+     Welcome to Class Critique! <br> Read reviews from our online-community of fitness lovers to find a class that may interest you! <br> If you have an experience you would like to share please leave a review!
 
-  <a href="/reviews/new">Add Review</a>
+      <br>
+  <a id='welcomea' href="/reviews/new">Add Your Review</a>
+  </div>
+</div>
 
-
-
-  <% for (let review of data) { %>
+  <% for (let reviews of data) { %>
     <div class='review'>
-      <p><%= review.className %></p>
-      <a href='/reviews/<%= review.id%>'>Learn more</a>
+      <p> "<%= reviews.review %>"</p>
+      <br>
+      <a href='/reviews/<%= reviews.id%>'>Learn more about this class!</a>
     </div>
   <% } %>
 

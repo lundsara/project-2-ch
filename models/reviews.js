@@ -1,31 +1,20 @@
 const db = require('../db/config');
-
-const Review = {};
+//const pgp = require('pg-promise')();
 
 // execute pgp with our db config, so a connection is made.
-// const db = pgp(dbConfig);
+//const db = pgp(dbConfig);
 
 module.exports = {
-  /**
-   * @func findAll
-   * @desc search through all the quotes
-   * @returns {Promise}
-   * @hint this
-   */
+
   findAll() {
+    console.log('in find all');
     return db.many(`
       SELECT *
         FROM reviews
-    ORDER BY id
+
     `);
   },
 
-  /**
-   * @func findById
-   * @param id {number} the ID of the quote to search for
-   * @desc search through the quotes and find by an ID
-   * @returns {Promise}
-   */
   findById(id) {
     return db.one(`
       SELECT *
@@ -37,11 +26,11 @@ module.exports = {
   create(review) {
     return db.one(`
       INSERT INTO reviews
-      (className, instructor, level, review)
+      (classname, instructor, level, review)
       VALUES
-      ($1, $2, $3)
+      ($1, $2, $3, $4)
       RETURNING *
-    `, [review.className, review.instructor, review.level, review.review_id]);
+    `, [review.classname, review.instructor, review.level, review.review]);
   },
 
   update(review, id) {
@@ -49,20 +38,16 @@ module.exports = {
     return db.one(`
       UPDATE reviews
       SET
-      className = $1,
+      classname = $1,
       instructor = $2,
       level = $3,
       review = $4
       WHERE id = $5
       RETURNING *
-    `, [review.className, review.instructor, review.level, review.review_id, id]);
+    `, [review.classname, review.instructor, review.level, review.review, id]);
   },
 
-  /**
-   * Removes one quote from DB
-   * @param {number} id - the id of a quote
-   * @returns {Promise}
-   */
+
   destroy(id) {
     return db.none(`
       DELETE
@@ -71,16 +56,6 @@ module.exports = {
     `, id);
   },
 };
-
-
-
-
-
-
-
-
-
-
 
 
 

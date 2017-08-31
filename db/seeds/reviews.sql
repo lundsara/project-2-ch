@@ -1,4 +1,4 @@
-INSERT INTO reviews (className, instructor, level, review) VALUES
+INSERT INTO reviews (classname, instructor, level, review) VALUES
   (
     'Intermediate Ballet',
     'Tobin Eason',
