@@ -1,0 +1,13 @@
+<% include ../partials/boilerplate %>
+
+<div class='review'>
+  <h1><%= data.className %></h1>
+  <h3><%= data.instructor %></h3>
+  <h3><%= data.level %></h3>
+  <h3><%= data.review %></h3>
+  <a href="/reviews/<%= data.id %>/edit"> Edit Review <%= data.id %> </a>
+  <form action="/reviews/<%= data.id %>?_method=Delete" method="Post">
+    <input type="Submit" value="Delete"/>
+  </form>
+  <a href='/reviews/'>See all Reviews</a>
+</div>

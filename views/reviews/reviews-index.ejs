@@ -1,0 +1,22 @@
+<% include ../partials/boilerplate %>
+
+<main>
+
+<div id='welcome'> Welcome to Class Critique! </div>
+
+  <a href="/reviews/new">Add Review</a>
+
+
+
+  <% for (let review of data) { %>
+    <div class='review'>
+      <p><%= review.className %></p>
+      <a href='/reviews/<%= review.id%>'>Learn more</a>
+    </div>
+  <% } %>
+
+  <% include ../partials/footer %>
+
+  </main>
+</body>
+</html>
