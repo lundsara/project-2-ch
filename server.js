@@ -5,10 +5,12 @@ const path = require ('path');
 const methodOverride = require('method-override');
 const reviewRouter = require('./routes/reviews-routes');
 
+
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
+require ('dotenv')
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));

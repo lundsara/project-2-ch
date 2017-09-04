@@ -5,7 +5,7 @@
 
 <div id='circle'>
   <div id='welcome'>
-     Welcome to Class Critique! <br> Read reviews from our online-community of fitness lovers to find a class that may interest you! <br> If you have an experience you would like to share please leave a review!
+     Welcome to Class Critique! <br> Read reviews from our online community of fitness lovers to find a class that may interest you- <br> or click below to add your own!
 
       <br>
   <a id='welcomea' href="/reviews/new">Add Your Review</a>
@@ -14,11 +14,24 @@
 
   <% for (let reviews of data) { %>
     <div class='review'>
+    <br>
       <p> "<%= reviews.review %>"</p>
       <br>
       <a href='/reviews/<%= reviews.id%>'>Learn more about this class!</a>
     </div>
   <% } %>
+
+<div id='apibox'>
+<div id='api'> <div id='studio'>Studio of the Week!</div>
+<br>
+<div>  <%= name %> </div>
+
+<div> Address: <%= address %> </div>
+<div> Rating:  <%= rating %> </div>
+</div>
+</div>
+
+
 
   <% include ../partials/footer %>
 

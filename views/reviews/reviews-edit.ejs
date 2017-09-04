@@ -2,7 +2,7 @@
 <% include ../partials/header.ejs %>
 
 
-<div id='smallcircle'><p id='edittitle'>Edit your Review below...</p> </div>
+<div id='smallcircleone'><p id='edittitle'>Edit your <br>Review below...</p> </div>
 
 <form method='POST' action='/reviews/<%= data.id %>?_method=PUT'>
   <input class='white' name='classname' type='text' value='<%= data.classname %>' />

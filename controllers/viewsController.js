@@ -10,7 +10,10 @@ module.exports = {
 
   showHome(req, res) {
     res.render('reviews/reviews-homepage', {
-      data: res.locals.reviews
+      data: res.locals.reviews,
+      name: res.locals.name,
+      address: res.locals.address,
+      rating: res.locals.rating
     });
   },
 
@@ -24,6 +27,7 @@ module.exports = {
     console.log(res.locals)
     res.render('reviews/reviews-single', {
       data: res.locals.review,
+
     });
   },
 

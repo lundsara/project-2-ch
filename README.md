@@ -28,3 +28,7 @@ I would like to get full CRUD application as MVP then I will tackle the MindBody
 
 Mind Body API:
 https://developers.mindbodyonline.com/Resources/FAQs
+
+  <li <a href="/reviews-index"><button class="head" id="home">Home</button></a>
+         <a href="/reviews-index"><button class="head" id="about"> About</button>
+         <a href="/reviews-index"><button class="head" id="reviews"> Reviews</button>
