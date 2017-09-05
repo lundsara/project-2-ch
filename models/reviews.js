@@ -1,6 +1,6 @@
 const db = require('../db/config');
 
-//export all query methods as one object
+//export all db query methods as one object
 module.exports = {
 
   findAll() {

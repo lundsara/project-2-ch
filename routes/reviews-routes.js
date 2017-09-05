@@ -3,8 +3,7 @@ const controller = require('../controllers/reviewsController');
 const views = require('../controllers/viewsController');
 const reviewsRouter = express.Router();
 
-require('dotenv').config();
-const API_KEY = process.env.API_SECRET_KEY;
+
 
 
 reviewsRouter.get('/:id/edit', controller.getOne, views.showEditForm, views.show404);

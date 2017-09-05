@@ -4,6 +4,14 @@
 This application offers you the ability to log your opinions on fitness class you have taken, the class name, and the instructor! 
 This database can be used as an individual resource or can be shared to inform others on classes they may be interested in taking!
 
+## Technologies Used: 
+HTML5
+CSS
+EJS
+Node.js
+Express
+Google Places API 
+
 ## Wireframes
 
 <img src="/assets/Wireframe1.jpg"></img>
@@ -22,13 +30,13 @@ review will to index page that contains all reviews currently held within databa
 
 ## Phases of Completion
 
-I would like to get full CRUD application as MVP then I will tackle the MindBody API and see if I can have a list of classes or instructors to pick from
+I would like to get full CRUD application as MVP then I will tackle the Google Places API and see if I can have a list of classes or instructors to pick from
 
+##Final Product
+<img src="/assets/home.jpg"></img>
+<img src="/assets/cctwo.jpg"></img>
 ## Resources
 
-Mind Body API:
-https://developers.mindbodyonline.com/Resources/FAQs
+Google Places API:
+https://developers.google.com/places/
 
-  <li <a href="/reviews-index"><button class="head" id="home">Home</button></a>
-         <a href="/reviews-index"><button class="head" id="about"> About</button>
-         <a href="/reviews-index"><button class="head" id="reviews"> Reviews</button>
