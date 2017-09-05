@@ -10,7 +10,6 @@ module.exports = {
  apiCall (req, res, next) {
 
 
-
 let url =`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7411088,-73.9888796&radius=500&type=fitness&keyword=uplift&key=AIzaSyBYFJ9eFjobee23255a1OH49SOgqsnAqoE`
 request(url, function (error, response, body) {
 
@@ -39,7 +38,7 @@ request(url, function (error, response, body) {
     });
   },
 
-
+//method to display the index page
   index(req, res, next) {
     reviewDB.findAll()
       .then((reviews) => {
@@ -50,7 +49,7 @@ request(url, function (error, response, body) {
       .catch(err => next(err));
   },
 
-
+//method to pull out a single review
   getOne(req, res, next) {
     reviewDB.findById(req.params.id)
       .then((review) => {
@@ -60,7 +59,7 @@ request(url, function (error, response, body) {
       .catch(err => next(err));
   },
 
-
+//method to create reviews
   create(req, res, next) {
     console.log('here');
     reviewDB.create(req.body)
@@ -71,7 +70,7 @@ request(url, function (error, response, body) {
       .catch(err => next(err));
   },
 
-
+//method to update reviews
   update(req, res, next) {
     reviewDB.update(req.body, req.params.id)
       .then((review) => {
@@ -81,7 +80,7 @@ request(url, function (error, response, body) {
       .catch(err => next(err));
   },
 
-
+//method to destroy reviews
   destroy(req, res, next) {
     reviewDB.destroy(req.params.id)
       .then(() => next())
@@ -89,8 +88,8 @@ request(url, function (error, response, body) {
   },
 
 
-
-  showQuoteForm: (req, res) => {
+//method to show review form
+  showReviewForm: (req, res) => {
     res.json({message: 'I’m the form for new Reviews. I post to /reviews'});
   },
 

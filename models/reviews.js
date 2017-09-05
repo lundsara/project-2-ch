@@ -1,9 +1,6 @@
 const db = require('../db/config');
-//const pgp = require('pg-promise')();
 
-// execute pgp with our db config, so a connection is made.
-//const db = pgp(dbConfig);
-
+//export all query methods as one object
 module.exports = {
 
   findAll() {
@@ -22,6 +19,7 @@ module.exports = {
        WHERE id = $1
     `, id);
   },
+
 
   create(review) {
     return db.one(`
