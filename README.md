@@ -5,11 +5,11 @@ This application offers you the ability to log your opinions on fitness class yo
 This database can be used as an individual resource or can be shared to inform others on classes they may be interested in taking!
 
 ## Technologies Used: 
-HTML5
-CSS
-EJS
-Node.js
-Express
+HTML5,
+CSS,
+EJS,
+Node.js,
+Express,
 Google Places API 
 
 ## Wireframes
@@ -32,7 +32,7 @@ review will to index page that contains all reviews currently held within databa
 
 I would like to get full CRUD application as MVP then I will tackle the Google Places API and see if I can have a list of classes or instructors to pick from
 
-##Final Product
+## Final Product
 <img src="/assets/home.jpg"></img>
 <img src="/assets/cctwo.jpg"></img>
 ## Resources
