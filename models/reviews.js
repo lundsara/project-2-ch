@@ -8,7 +8,6 @@ module.exports = {
     return db.many(`
       SELECT *
         FROM reviews
-
     `);
   },
 
@@ -24,11 +23,11 @@ module.exports = {
   create(review) {
     return db.one(`
       INSERT INTO reviews
-      (studio, classname, instructor, level, review)
+      (classname, instructor, level, review)
       VALUES
-      ($1, $2, $3, $4, $5)
+      ($1, $2, $3, $4)
       RETURNING *
-    `, [review.studio, review.classname, review.instructor, review.level, review.review]);
+    `, [review.classname, review.instructor, review.level, review.review]);
   },
 
   update(review, id) {
@@ -36,14 +35,13 @@ module.exports = {
     return db.one(`
       UPDATE reviews
       SET
-      studio = $1
-      classname = $2,
-      instructor = $3,
-      level = $4,
-      review = $5
-      WHERE id = $6
+      classname = $1,
+      instructor = $2,
+      level = $3,
+      review = $4
+      WHERE id = $5
       RETURNING *
-    `, [review.studio, review.classname, review.instructor, review.level, review.review, id]);
+    `, [review.classname, review.instructor, review.level, review.review, id]);
   },
 
 
