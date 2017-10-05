@@ -10,7 +10,8 @@ CSS,
 EJS,
 Node.js,
 Express,
-Google Places API 
+Google Places API ,
+PSQL
 
 ## Wireframes
 
@@ -39,4 +40,8 @@ I would like to get full CRUD application as MVP then I will tackle the Google P
 
 Google Places API:
 https://developers.google.com/places/
+<div>  <%= name %> </div>
+
+<div> Address: <%= address %> </div>
+<div> Rating:  <%= rating %> </div>
 

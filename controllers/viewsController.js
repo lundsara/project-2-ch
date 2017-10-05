@@ -11,16 +11,15 @@ module.exports = {
 
 //method to produce view of homepage
   showHome(req, res) {
+    console.log('in showHome function');
     res.render('reviews/reviews-homepage', {
       data: res.locals.reviews,
-      name: res.locals.name,
-      address: res.locals.address,
-      rating: res.locals.rating
     });
   },
 
 //method to produce view of reviews
   showReviews(req, res) {
+    console.log('in showReviews function');
      res.render('reviews/reviews-index', {
       data: res.locals.reviews,
     });

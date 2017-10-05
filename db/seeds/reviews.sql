@@ -1,17 +1,20 @@
-INSERT INTO reviews (classname, instructor, level, review) VALUES
+INSERT INTO reviews (studio, classname, instructor, level, review) VALUES
   (
+    '',
     'Intermediate Ballet',
     'Tobin Eason',
     'Intermediate',
     'This class was very challenging but amazing! One of the best teachers in NYC!'
   ),
   (
+    '',
     'Soul Cycle',
     'Fit Woman',
     'All Levels',
     'This class was way overpriced!'
   ),
    (
+    '',
     'Nike Run Club',
     'Intense Runner Guy',
     'All Levels',

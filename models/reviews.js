@@ -24,11 +24,11 @@ module.exports = {
   create(review) {
     return db.one(`
       INSERT INTO reviews
-      (classname, instructor, level, review)
+      (studio, classname, instructor, level, review)
       VALUES
-      ($1, $2, $3, $4)
+      ($1, $2, $3, $4, $5)
       RETURNING *
-    `, [review.classname, review.instructor, review.level, review.review]);
+    `, [review.studio, review.classname, review.instructor, review.level, review.review]);
   },
 
   update(review, id) {
@@ -36,13 +36,14 @@ module.exports = {
     return db.one(`
       UPDATE reviews
       SET
-      classname = $1,
-      instructor = $2,
-      level = $3,
-      review = $4
-      WHERE id = $5
+      studio = $1
+      classname = $2,
+      instructor = $3,
+      level = $4,
+      review = $5
+      WHERE id = $6
       RETURNING *
-    `, [review.classname, review.instructor, review.level, review.review, id]);
+    `, [review.studio, review.classname, review.instructor, review.level, review.review, id]);
   },
 
 

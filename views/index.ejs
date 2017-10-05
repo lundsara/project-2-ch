@@ -1,13 +1,40 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/header.ejs %>
+
 <main>
 
-<div id='welcome'> Welcome to Class Critique! </div>
+<div id='circle'>
+  <div id='welcome'>
+     Welcome to Class Critique! <br> Read reviews from our online community of fitness lovers to find a class that may interest you- <br> or click below to add your own!
 
-<a href="/reviews"> Add your Review! </a>
+      <br>
+  <a id='welcomea' href="/reviews/new">Add Your Review</a>
+  </div>
+</div>
+
+  <% for (let reviews of data) { %>
+    <div class='review'>
+    <br>
+      <p> "<%= reviews.review %>"</p>
+      <br>
+      <a href='/reviews/<%= reviews.id%>'>Learn more about this class!</a>
+    </div>
+  <% } %>
+
+<div id='apibox'>
+<div id='api'> <div id='studio'>Studio of the Week!</div>
 <br>
-<a href="/reviews"> See All Reviews! </a>
-</main>
+<div>Joffrey Ballet School</div>
+
+<div> Address: 434 Avenue of the Americas <br> New York, NY<br> 10011  </div>
+<div> Rating: 4.8/5.0 </div>
+</div>
+</div>
+
+
 
   <% include ../partials/footer %>
+
+  </main>
 </body>
 </html>

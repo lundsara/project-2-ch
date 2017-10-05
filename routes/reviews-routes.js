@@ -15,7 +15,7 @@ reviewsRouter.route('/:id')
 .delete(controller.destroy, views.handleDelete, views.show406);
 
 reviewsRouter.route('/')
-.get(controller.apiCall, controller.index, views.showReviews, views.show404)
+.get(controller.index, views.showReviews, views.show404)
 .post(controller.create, views.handleCreate, views.show406);
 
 
