@@ -7,7 +7,6 @@ const API_SECRET_KEY = process.env.API_SECRET_KEY;
 module.exports = {
 
 
-
   makeEmptyReview(req, res) {
     res.json({
       id:  null,
